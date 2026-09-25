@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-careeronestop",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "CareerOneStop MCP — wraps the CareerOneStop Web API (U.S. Dept. of Labor)",
   "type": "module",
   "main": "src/index.ts",
@@ -26,7 +26,7 @@
     "@cloudflare/workers-types": "^4.20260405.1"
   },
   "pipeworx": {
-    "sourceHash": "v1-e1b670ee6254ccfa00a18d0aa45038b348c145efcd5c27bb12592a0b9f52a227",
-    "sourceCommit": "60f04b68c347e970c6be94a53439d1364061fc06"
+    "sourceHash": "v1-39c73fb4d1168e166d3037daa492ab66ea17ee52bcb52a8671eb81e66a503685",
+    "sourceCommit": "babdd280d475dceddecc9ebf8f2a661712781a81"
   }
 }
