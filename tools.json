@@ -1,0 +1,78 @@
+[
+  {
+    "name": "careeronestop_salary",
+    "description": "What does <occupation> pay in <location> — wage percentiles (10th/25th/median/75th/90th, hourly + annual) for a U.S. occupation from the Dept. of Labor CareerOneStop API. Accepts an O*NET/SOC title or code. Example: careeronestop_salary({ occupation: \"Registered Nurses\", location: \"TX\", _apiKey: \"userId:token\" })",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "occupation": {
+          "type": "string",
+          "description": "Occupation keyword, O*NET/SOC title, or code, e.g. \"Registered Nurses\" or \"29-1141.00\""
+        },
+        "location": {
+          "type": "string",
+          "description": "Location: state (\"TX\"), \"City, State\" (\"Reston, VA\"), ZIP (\"20191\"), or \"US\" for national data"
+        },
+        "_apiKey": {
+          "type": "string",
+          "description": "CareerOneStop credentials as \"userId:token\" (free at https://www.careeronestop.org/Developers/WebAPI/registration.aspx)"
+        }
+      },
+      "required": [
+        "occupation",
+        "location",
+        "_apiKey"
+      ]
+    }
+  },
+  {
+    "name": "careeronestop_occupation",
+    "description": "Occupation detail (tasks, outlook, typical education) for <occupation> from the Dept. of Labor CareerOneStop / O*NET data. Example: careeronestop_occupation({ occupation: \"Registered Nurses\", _apiKey: \"userId:token\" })",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "occupation": {
+          "type": "string",
+          "description": "Occupation keyword, O*NET/SOC title, or code, e.g. \"Registered Nurses\" or \"29-1141.00\""
+        },
+        "location": {
+          "type": "string",
+          "description": "Location: state (\"TX\"), \"City, State\", ZIP, or \"US\" for national. Defaults to \"US\"."
+        },
+        "_apiKey": {
+          "type": "string",
+          "description": "CareerOneStop credentials as \"userId:token\" (free at https://www.careeronestop.org/Developers/WebAPI/registration.aspx)"
+        }
+      },
+      "required": [
+        "occupation",
+        "_apiKey"
+      ]
+    }
+  },
+  {
+    "name": "careeronestop_compare_salary",
+    "description": "Compare salaries across occupations — side-by-side wage data for multiple U.S. occupations from the Dept. of Labor CareerOneStop API. Example: careeronestop_compare_salary({ occupations: \"Registered Nurses, Physician Assistants\", location: \"US\", _apiKey: \"userId:token\" })",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "occupations": {
+          "type": "string",
+          "description": "Comma-separated occupations (titles or O*NET/SOC codes), e.g. \"Registered Nurses, 29-1171.00\""
+        },
+        "location": {
+          "type": "string",
+          "description": "Location applied to every occupation: state, \"City, State\", ZIP, or \"US\" for national. Defaults to \"US\"."
+        },
+        "_apiKey": {
+          "type": "string",
+          "description": "CareerOneStop credentials as \"userId:token\" (free at https://www.careeronestop.org/Developers/WebAPI/registration.aspx)"
+        }
+      },
+      "required": [
+        "occupations",
+        "_apiKey"
+      ]
+    }
+  }
+]

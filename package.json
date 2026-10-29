@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-careeronestop",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "CareerOneStop MCP — wraps the CareerOneStop Web API (U.S. Dept. of Labor) (api.careeronestop.org). Fills a salary-percentile + labor-market-info gap: where the `bls` pack returns raw time series, this returns ready-to-read wage percentiles (10th/25th/median/75th/90th), occupation detail (tasks…",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-careeronestop": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "careeronestop"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-careeronestop.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/careeronestop",
   "pipeworx": {
-    "sourceHash": "v1-c2198e108353f250427ac5935db909e263bcb994f0d765aae9a2e3972080d3b4",
-    "sourceCommit": "70a4e816a9195016cd4af92dca2019485d4c3865"
+    "mode": "gateway",
+    "slug": "careeronestop",
+    "gatewaySlug": "careeronestop",
+    "sourceHash": "v1-8c8cf0676d8fe940069f6b9dbcf7602ea94d6d98b010ba49f1c5fdf94a293426",
+    "sourceCommit": "4277282d72f9bf55e548b3799aaf737baf22152f"
   }
 }
