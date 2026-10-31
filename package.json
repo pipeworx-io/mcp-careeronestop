@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-careeronestop",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "CareerOneStop MCP — wraps the CareerOneStop Web API (U.S. Dept. of Labor) (api.careeronestop.org). Fills a salary-percentile + labor-market-info gap: where the `bls` pack returns raw time series, this returns ready-to-read wage percentiles (10th/25th/median/75th/90th), occupation detail (tasks…",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "careeronestop",
     "gatewaySlug": "careeronestop",
-    "sourceHash": "v1-8c8cf0676d8fe940069f6b9dbcf7602ea94d6d98b010ba49f1c5fdf94a293426",
-    "sourceCommit": "4277282d72f9bf55e548b3799aaf737baf22152f"
+    "sourceHash": "v1-8f2e6367c82388e982bb56ea70b8afc4d64bc53bf49a06458e9bcec1b03bdde8",
+    "sourceCommit": "547a3983b42dacf4389ca474860b0a1dee8e6053"
   }
 }
